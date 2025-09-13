@@ -10,7 +10,7 @@ Um sistema embarcado multifuncional para controlo de iluminação, construído c
 
 ### 🎬 Demonstração em Ação
 
-*(O GIF do projeto em funcionamento. Este é o elemento mais importante para captar a atenção!)*
+*To DO*
 
 ![GIF do Projeto a Funcionar](https-placeholder-for-your-gif.gif) 
 
