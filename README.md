@@ -4,7 +4,7 @@
 ![Plataforma](https://img.shields.io/badge/plataforma-STM32F103-blue)
 ![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS%20(CMSIS--OS)-orange)
 
-Um sistema embarcado multifuncional para controlo de iluminação, construído com FreeRTOS. Demonstra a gestão de múltiplas threads, comunicação inter-thread com Fila de Mensagens, e controlo de periféricos em tempo real. Este projeto foi desenvolvido com base na proposta de trabalho final para a disciplina de **ECOS03 - Sistemas Operacionais Embarcados**.
+Um sistema embarcado multifuncional para controle de iluminação, construído com FreeRTOS. Demonstra a gestão de múltiplas threads, comunicação inter-thread com Fila de Mensagens e controle de periféricos em tempo real. Este projeto foi desenvolvido com base na proposta de trabalho final para a disciplina de **ECOS03 - Sistemas Operacionais Embarcados**.
 
 ---
 
@@ -45,7 +45,7 @@ Um sistema embarcado multifuncional para controlo de iluminação, construído c
 O sistema foi construído seguindo práticas de design robustas para sistemas de tempo real:
 * **Fila de Mensagens:** As threads de input (`ThreadControleBot`, `ThreadPollingBotoes`) não modificam o estado diretamente. Elas produzem "eventos" e os enviam para uma fila central.
 * **Gestor de Estado:** Uma única thread (`ThreadGestoraDeEstado`) consome os eventos da fila e é a única responsável por alterar as variáveis de estado globais, prevenindo condições de corrida.
-* **Thread Guardiã:** A `ThreadADCReader`, com alta prioridade, é a única thread que acede ao hardware do ADC, lendo o valor do potenciómetro continuamente e disponibilizando-o de forma segura para o resto do sistema.
+* **Thread Guardiã:** A `ThreadADCReader`, com alta prioridade, é a única thread que acessa ao hardware do ADC, lendo o valor do potenciómetro continuamente e disponibilizando-o de forma segura para o resto do sistema.
 * **Sincronização:** Mutexes (`g_FuncMutexHandle`) são usados pelas threads "leitoras" para garantir que acedem a um estado consistente.
 * **Modularidade:** Cada funcionalidade principal (animações, suavização, watchdog, status) é encapsulada na sua própria thread, facilitando a manutenção e expansão.
 
