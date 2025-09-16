@@ -17,7 +17,7 @@ Um sistema embarcado multifuncional para controle de iluminação, construído c
 ### ✨ Funcionalidades Principais
 
 * 🌀 **5 Padrões de Animação:** Incluindo Pares/Ímpares, Código Gray, Knight Rider e Contador Binário.
-* 🚀 **Controlo de Velocidade Avançado:** Com ajuste dinâmico, presets e um algoritmo de **suavização de transição** para mudanças de velocidade graduais.
+* 🚀 **Controle de Velocidade Avançado:** Com ajuste dinâmico, presets e um algoritmo de **suavização de transição** para mudanças de velocidade graduais.
 * 🔊 **Feedback Audiovisual Completo:** Um buzzer com tons variáveis e um **LED de status dedicado** para feedback de modo, atividade e erros críticos do sistema.
 * 🏗️ **Arquitetura RTOS Robusta:** Utiliza **Fila de Mensagens** para gestão de estado, uma thread "Guardiã" para acesso seguro ao ADC, e um **Watchdog por Software** para monitorizar a saúde do sistema.
 
